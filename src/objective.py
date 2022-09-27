@@ -12,6 +12,7 @@ def objective(trial: optuna.Trial) -> float:
 
     trial.report(float('inf'), step=1)
     trial.report(float('-inf'), step=2)
+    trial.report(float('nan'), step=3)
     trial.report(0.5, step=3)
 
     return x1**y1 + x2**y2 + x3**y3 + c1
